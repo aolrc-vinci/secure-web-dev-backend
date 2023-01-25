@@ -7,17 +7,17 @@ const filmingLocations = require("./lieux-de-tournage-a-paris.json");
 
 function buildLocation(filmingLocation) {
   return {
-    filmType: filmingLocation.fields.type_tournage,
-    filmProducerName: filmingLocation.fields.nom_producteur,
-    endDate: filmingLocation.fields.date_fin,
-    filmName: filmingLocation.fields.nom_tournage,
-    district: filmingLocation.fields.ardt_lieu,
-    sourceLocationId: filmingLocation.fields.id_lieu,
-    filmDirectorName: filmingLocation.fields.nom_realisateur,
-    address: filmingLocation.fields.adresse_lieu,
-    startDate: filmingLocation.fields.date_debut,
-    year: filmingLocation.fields.annee_tournage,
-    geolocation: filmingLocation.fields.geo_shape,
+    filmType: filmingLocation.type_tournage,
+    filmProducerName: filmingLocation.nom_producteur,
+    endDate: filmingLocation.date_fin,
+    filmName: filmingLocation.nom_tournage,
+    district: filmingLocation.ardt_lieu,
+    sourceLocationId: filmingLocation.id_lieu,
+    filmDirectorName: filmingLocation.nom_realisateur,
+    address: filmingLocation.adresse_lieu,
+    startDate: filmingLocation.date_debut,
+    year: filmingLocation.annee_tournage,
+    geolocation: filmingLocation.geo_shape,
   };
 }
 
