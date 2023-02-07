@@ -7,6 +7,8 @@ const bodyParser = require("body-parser");
 require("./src/authentication/local.strategy");
 require("./src/authentication/jwt.strategy");
 const passport = require("passport");
+const { default: Login } = require("./src/frontend/loginpage");
+
 
 const app = express();
 const port = 3000;
@@ -21,7 +23,8 @@ app.use(
 );
 app.use("/users", usersController);
 
-app.get("/", (req, res) => res.status(200).json("Hello World !"));
+//app.get("/login",Login);
+app.get("/", (req, res) => res.status(200).json({ message: "Hello World !" }));
 
 async function main() {
   await mongoose.connect(process.env.MONGO_URI);
