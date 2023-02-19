@@ -7,13 +7,12 @@ const bodyParser = require("body-parser");
 require("./src/authentication/local.strategy");
 require("./src/authentication/jwt.strategy");
 const passport = require("passport");
-const { default: Login } = require("./src/frontend/loginpage");
-
 
 const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
+app.use(cors("*"));
 
 // Protect all /locations route with JWT Authentication
 app.use(
